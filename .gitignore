@@ -1,0 +1,39 @@
+# macOS system files
+.DS_Store
+.vscode
+.idea
+__pycache__
+*.qsub
+
+# MATLAB autosave files
+*.asv
+
+# MATLAB scripts cache
+*.m~
+
+# Large imaging files
+*.tif
+*.tiff
+*.zip
+
+# Other temporary or cache files
+*.tmp
+*.log
+*.txt
+log_*
+log-d3r3
+
+# folders for saving result
+debug
+weights
+test
+train
+no_pe
+ampfb16
+from_jiaqi
+fouriernet/checkpoints
+fouriernet/log
+result_2.py
+exp_test.py
+model_3d.py
+
