@@ -1,0 +1,42 @@
+#!/bin/bash -l
+
+
+# Specify the project name
+#$-P tianlabbpm
+
+# Specify the time limit
+#$-l h_rt=6:00:00
+
+# Job Name
+#$-N test_SV_CoDe
+
+# Send email at the end of the job
+#$-m e
+
+# Join error and output streams
+#$-j y
+
+# Output can be appended to the log file
+#$-o log_SV_CoDe
+
+# Specify number of cores 16: a whole node with at least 128gb ram
+#$-pe omp 16
+
+#Specify the number of GPUs (1 is recommended!)
+#$-l gpus=1
+
+#Specify the minimum gpu capability
+#$-l gpu_c=8.6
+
+#$-l gpu_memory=48G
+
+#Load modules:
+module load miniconda
+
+export HDF5_USE_FILE_LOCKING=FALSE
+
+#Run the program
+conda deactivate
+conda activate SV-CoDe
+
+python result.py --task_name SV_CoDe --epoch 35 --checkpoint checkpoints/model_epoch0035.pth --dir_data /ad/eng/research/eng_research_cisl/yqw/simulation_beads/2d/lsv_2d_beads_v17_test/

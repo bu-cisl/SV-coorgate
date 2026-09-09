@@ -35,7 +35,7 @@ parser.add_argument('--precision', default='amp_bf16',
                     help='Numerics mode: pure FP32, AMP FP16, or AMP BF16')
 parser.add_argument('--cache_eval', default='off', choices=['off','on'])
 parser.add_argument("--num_gpu", type=int, default=[1], dest='num_gpu')
-parser.add_argument('--num_epoch', type=int,  default=150, dest='num_epoch')
+parser.add_argument('--num_epoch', type=int,  default=35, dest='num_epoch')
 parser.add_argument('--batch_size', type=int, default=3, dest='batch_size')
 parser.add_argument('--lr', type=float, default=1e-4, dest='lr')
 parser.add_argument('--train_ratio', type=float, default=0.9, dest='train_ratio')
